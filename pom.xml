@@ -11,16 +11,23 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+		<groupId>org.easymock</groupId>
+		<artifactId>easymock</artifactId>
+		<version>3.1</version>
+		<scope>test</scope>
+	</dependency>
+    
   </dependencies>
     <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-
+		
         <configuration>
           <archive>
             <manifest>
@@ -33,6 +40,19 @@
       </plugin>
     </plugins>
   </build>
+  
+  
+<reporting>
+	<plugins>
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>cobertura-maven-plugin</artifactId>
+			<version>2.6</version>
+		</plugin>
+	</plugins>
+</reporting>
+
+
 
 </project>
 
